@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Reset + Var Definition: Start */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+
+  /* vendor prefix do motor de navegador - opcional */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* variáveis */
+
+:root {
+  --brand-color-primary: #f7b733;
+  --brand-color-secondary: #fc4a1a;
+  --brand-gradient: linear-gradient(
+    to right,
+    var(--brand-color-primary),
+    var(--brand-color-secondary)
+  );
+
+  --bg-color: #09090b;
+  --surface-color: #18181b;
+  --stroke-color: #27272a;
+  --text-color-primary: #f4f4f5;
+  --text-color-secondary: #a1a1aa;
+
+  /* system-ui: padrão do sistema */
+  /* melhor opção para fallback... Emergência */
+  --ff-sans: "Inter", system-ui, sans-serif;
+
+  /* font-weight */
+  --fw-base: 400;
+  --fw-md: 500;
+  --fw-bold: 800;
+
+  /* font-size */
+  /* rem sempre olha pra base do font-size do navegador */
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2.5rem;
+
+  --px-lg: 1.5rem; /* 24px */
+  --px-xl: 3rem;
+
+  --py-base: 1rem;
+  --py-lg: 1.5rem;
+  --py-xl: 3rem;
+}
+
+/* já definiu a fonte na raiz. deixei na ordem do shorthand de font */
+html {
+  font-weight: var(--fw-base);
+
+  font-size: var(--fs-base);
+  line-height: 1.6;
+
+  font-family: var(--ff-sans);
+
+  color: var(--text-color-primary);
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3 {
+  /* color: var(--text-color-primary); não houve necessidade porque já está inserida na html */
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--fs-2xl);
+}
+h2 {
+  font-size: var(--fs-xl);
+}
+h3 {
+  font-size: var(--fs-lg);
+}
+
+a {
+  text-decoration: none;
+
+  /* herdou do pai (html) */
+  color: inherit;
+}
+
+ul[role="list"] {
+  list-style: none;
+}
+
+/* 1280px  */
+@media (width >= 80em) {
+  :root {
+    --fs-lg: 2rem;
+    --fs-xl: 3rem;
+    --fs-2xl: 4rem;
+
+    --px-lg: 2rem;  
+
+    --py-base: 1.5rem;
+    --py-xl: 5rem;
+    --py-lg: 2.5rem;
+  }
+}
+/* Reset + Var Definition: End */
+
+/*
+  --desktop-h1: 800 4rem/1.2 "Inter", sans-serif;
+  --desktop-h2: 800 3rem/1.2 "Inter", sans-serif;
+  --desktop-h3: 800 2rem/1.2 "Inter", sans-serif;
+  --desktop-p: 400 1rem/1.6 "Inter", sans-serif;
+  --desktop-span: 500 0.875rem "Inter", sans-serif;
+
+  --mobile-h1: 800 2.5rem/1.2 "Inter", sans-serif;
+  --mobile-h2: 800 1.5rem/1.2 "Inter", sans-serif;
+  --mobile-h3: 800 1.25rem/1.2 "Inter", sans-serif;
+  --mobile-p: 400 1rem/1.6 "Inter", sans-serif;
+  --mobile-span: 500 0.875rem "Inter", sans-serif;
+*/

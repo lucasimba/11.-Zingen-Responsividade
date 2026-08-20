@@ -1,0 +1,49 @@
+/* Containers, paddings, espaços padronizados, grid, flex... */
+
+.py-base {
+  /* padding-block é responsável por definir o eixo y */
+  padding-block: var(--py-base);
+}
+.py-lg {
+  padding-block: var(--py-lg);
+}
+.py-xl {
+  padding-block: var(--py-xl);
+}
+
+.px-lg {
+  /* padding-inline é responsável por definir o eixo x  */
+  padding-inline: var(--px-lg);
+}
+
+/* definir onde conteremos os elementos na construção do html */
+.container {
+  --max-width: 375px;
+  width: min(var(--max-width), 100% - var(--px-lg) * 2);
+  border: solid violet;
+  margin: 0 auto;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.even-columns {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 80rem;
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
