@@ -1,2 +1,14 @@
 @import url(/styles/global.css);
 @import url(/styles/utility.css);
+@import url(/styles/buttons.css);
+@import url(/styles/social.css);
+@import url(/styles/header.css);
+@import url(/styles/hero.css);
+@import url(/styles/sections.css);
+@import url(/styles/about.css);
+@import url(/styles/cards.css);
+/* regra nova: só será importado se a largura for maior ou igual à 80rem */
+@import url(/styles/features.css) (width >= 80rem);
+@import url(/styles/pricing.css);
+@import url(/styles/download.css);
+@import url(/styles/footer.css);
